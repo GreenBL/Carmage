@@ -7,6 +7,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/clearButton"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="CLEAR"
+        android:textSize="24sp"
+        app:cornerRadius="16dp"
+        app:layout_column="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_row="3" />
+
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
@@ -19,6 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintVertical_bias="0.347"
         app:rowCount="4"
         app:rowOrderPreserved="true"
         app:useDefaultMargins="true">
@@ -150,6 +167,10 @@
             android:id="@+id/field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusable="false" />
+            android:focusable="false"
+            android:maxLines="3"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textSize="34sp" />
     </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
